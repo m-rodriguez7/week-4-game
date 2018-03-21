@@ -28,3 +28,8 @@ The 4 characters are:
 When you choose a character, the rest become enemies
 
 the objects have to be represented in the html as well
+
+
+
+
+1) create row of clickable character profiles. 
