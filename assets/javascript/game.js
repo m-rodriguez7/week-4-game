@@ -3,28 +3,28 @@
 
 
 var obi = {
-    name: "obiWan",
+    name: "Obi-Wan Kenobi",
     health: 120,
     attack: 8,
     img: "<img src ='assets/images/obi.jpg' width='200' height='200' alt='obiwan'>"
 };
 
 var quigon = {
-    name: "quigon",
+    name: "Qui-Gon Jinn",
     health: 100,
     attack: 5, //double check attack with the video
     img: "<img src ='assets/images/quigon.jpg' width='200' height='200' alt='quigon'>"
 }
 
 var sid = {
-    name: "sid",
+    name: "Darth Sidious",
     health: 150,
     attack: 5, //double check
     img: "<img src ='assets/images/sid.png' width='200' height='200' alt='sid'>"
 }
 
 var maul = {
-    name: "maul",
+    name: "Darth Maul",
     health: 180,
     attack: 5, //double check
     img: "<img src ='assets/images/maul.jpg' width='200' height='200' alt='maul'>"
@@ -35,23 +35,60 @@ var characters = [obi, quigon, sid, maul];
 
 var initialize = function () {
     var i = 0; // i start by using the empty div that is already in the html
-    $("#initial").children().find(".name").html(characters[i].name);
-    $("#initial").children().find(".img").html(characters[i].img);
-    $("#initial").children().find(".health").html(characters[i].health);
+    $("#initial").find(".name").html(characters[i].name);
+    $("#initial").find(".img").html(characters[i].img);
+    $("#initial").find(".health").html(characters[i].health);
     i++;
     while (i<characters.length) {
-        var chardiv = $("#initial").children();
-        console.log(chardiv);
+        var chardiv = $("#clone").clone();
         chardiv.find(".name").html(characters[i].name);
         chardiv.find(".img").html(characters[i].img);
         chardiv.find(".health").html(characters[i].health)
         $("#initial").append(chardiv);
         console.log("div appended?");
-        i++
-    }
+        i++;
+    } 
 }
 
 initialize(); // this starts the game by displaying the playable characters at the top of the page
+
+
+
+
+
+// insert onclick functions here
+$(".img").on("click", function () {
+    console.log(this.name);
+    if (this.name === "Obi-Wan Kenobi") {
+        console.log("click working");
+    } else {
+        console.log("click not working");
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //$("#obiwan").html(obiWan.html);
 //$("#quigon").html(quigon.html);
