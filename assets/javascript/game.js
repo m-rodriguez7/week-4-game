@@ -162,8 +162,8 @@ $("#attack").on("click", function() {
         // update enemy health in DOM
         $(".defender").find(".health").html("<p>"+eval(enemy).health+"</p>");
         if (eval(enemy).health <= 0) { // check if enemy is defeated
-            // increase playerAttack by 8
-            playerAttack += 8;
+            // increase playerAttack by 10
+            playerAttack += 10;
             // empty defender div
             console.log("enemy defeated");
             $(".battle").html("<p>You have defeated the enemy! Click the next one to continue the fight.</p>");
